@@ -16,10 +16,6 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "tabs",
-    "https://*/*",
-    "http://*/*",
-    "storage",
-    "webNavigation"
+    "activeTab"
   ]
 }

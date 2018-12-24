@@ -31,3 +31,5 @@ com_crashlytics_export_strings.xml
 #sass
 *.sass-cache*
 
+#Files related to chrome web store
+/webStore
