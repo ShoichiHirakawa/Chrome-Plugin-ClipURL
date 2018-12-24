@@ -8,6 +8,9 @@
     "48": "images/icon/icon_48.png",
     "128": "images/icon/icon_128.png"
   },
+  "permissions": [
+    "activeTab"
+  ],
   "browser_action": {
     "default_icon": {
       "48": "images/icon/icon_48.png"
@@ -15,7 +18,10 @@
     "default_title": "Clip URL",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "activeTab"
-  ]
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  }
 }
