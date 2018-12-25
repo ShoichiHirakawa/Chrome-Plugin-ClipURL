@@ -1,12 +1,11 @@
 (function() {
 
-    chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-        if (request.text == "code-block") {
-            const selection = window.getSelection().toString().replace(/\n/g, "<br/>");
-            const insertContent = `<samp>${selection}</samp>`;
-            document.execCommand("insertHTML", false, insertContent);
-            sendResponse({ "text": insertContent });
-        }
+    chrome.commands.onCommand.addListener(function (command) {
+        if (command === 'copy') {
+            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+                copy(tabs[0]);
+            });
+        }        
     });
 
   }).call(this);

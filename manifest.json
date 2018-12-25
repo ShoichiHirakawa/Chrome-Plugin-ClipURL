@@ -19,9 +19,19 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": [
+    "scripts": [      
+      "js/impl/function.js",
       "js/background.js"
     ],
     "persistent": false
+  },
+  "commands": {
+    "copy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X",
+        "mac": "Command+Shift+X"
+      },
+      "description": "Make a copy."
+    }
   }
 }
