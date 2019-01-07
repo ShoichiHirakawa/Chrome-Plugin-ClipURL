@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Clip URL",
   "description": "Extension for copying site URL and title.",
-  "version": "1.1",
+  "version": "1.2",
   "icons": {
     "16": "images/icon/icon_16.png",
     "48": "images/icon/icon_48.png",
@@ -11,11 +11,16 @@
   "permissions": [
     "activeTab"
   ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  }, 
   "browser_action": {
     "default_icon": {
       "48": "images/icon/icon_48.png"
     },
-    "default_title": "Clip URL",
-    "default_popup": "popup.html"
+    "default_title": "Clip URL"
   }
 }
